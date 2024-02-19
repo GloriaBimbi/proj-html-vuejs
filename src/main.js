@@ -12,13 +12,21 @@ import {
   faBookOpen,
   faGear,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebookF,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 library.add(
   faMagnifyingGlass,
   faUserPlus,
   faCaretDown,
   faCartShopping,
   faBookOpen,
-  faGear
+  faGear,
+  faFacebookF,
+  faTwitter,
+  faInstagram
 );
 
 const app = createApp(App);

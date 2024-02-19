@@ -9,7 +9,7 @@ export default {
   },
 
   props: {
-    links: Array,
+    headerLinks: Array,
   },
 };
 </script>
@@ -22,7 +22,7 @@ export default {
       </div>
       <div class="info">
         <ul class="link-list">
-          <li v-for="link in links">
+          <li v-for="link in headerLinks">
             <a href="#">{{ link }}</a>
             <font-awesome-icon icon="fa-solid fa-caret-down" />
           </li>

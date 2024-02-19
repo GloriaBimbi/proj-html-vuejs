@@ -17,6 +17,30 @@ export default {
         "Contact",
         "Purchase",
       ],
+      footerLinks: [
+        {
+          title: "Get EduPrime",
+          links: [
+            "Request a website",
+            "Browse Themes",
+            "Payment Options",
+            "Support System",
+            "Checkout",
+            "Purchase Theme",
+          ],
+        },
+        {
+          title: "Networking",
+          links: [
+            "Purchase Theme",
+            "Our Benefits",
+            "Our Theam",
+            "Our Services",
+            "Other Products",
+            "My account",
+          ],
+        },
+      ],
     };
   },
   components: { AppMain, AppHeader, AppFooter },
@@ -24,9 +48,9 @@ export default {
 </script>
 
 <template>
-  <app-header :links="headerLiks" />
+  <app-header :headerLiks="headerLiks" />
   <app-main />
-  <app-footer />
+  <app-footer :footerLinks="footerLinks" />
 </template>
 
 <style lang="scss">
