@@ -25,6 +25,7 @@ export default {
 <style lang="scss" scoped>
 .search-bar {
   position: relative;
+
   .search-input {
     height: 50px;
     width: 300px;
@@ -32,6 +33,7 @@ export default {
     padding: 30px 20px;
     border: 0;
     color: grey;
+    box-shadow: 2px 2px 10px rgb(59, 59, 59);
   }
   .yellow-button {
     width: 60px;

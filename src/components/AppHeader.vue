@@ -125,9 +125,10 @@ header {
         background-color: #e9d657;
         font-weight: bold;
         cursor: pointer;
+        box-shadow: 2px 2px 10px rgb(59, 59, 59);
 
         &:hover {
-          background-color: #fedf10;
+          background-color: #e2ae3d;
         }
       }
     }
@@ -170,6 +171,7 @@ header {
         border-radius: 2rem;
         font-weight: bold;
         cursor: pointer;
+        box-shadow: 2px 2px 10px rgb(59, 59, 59);
       }
 
       .yellow-button {
@@ -177,7 +179,7 @@ header {
         background-color: #e9d657;
 
         &:hover {
-          background-color: #fedf10;
+          background-color: #e2ae3d;
         }
       }
 
