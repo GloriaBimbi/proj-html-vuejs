@@ -72,6 +72,47 @@ export default {
       </div>
       <img src="../assets/img/svg/svg-0.svg" alt="border" class="border-img" />
     </div>
+    <div class="university-section">
+      <img
+        src="../assets/img/Clock-and-Bell.png"
+        alt="clock img"
+        class="clock-img"
+      />
+      <h2>University Year</h2>
+      <img
+        class="timeline-img"
+        src="../assets/img/Timeline-Item.png"
+        alt="timeline img"
+      />
+      <div class="orientation">
+        <h3>Orientation</h3>
+        <p>
+          First day of the university year, all students gather for the opening
+          ceremony and the network with others.
+        </p>
+      </div>
+      <div class="demo">
+        <h3>Demo Classes</h3>
+        <p>
+          In the first week, students try to accomodate with the teaching style
+          and choose their optional courses.
+        </p>
+      </div>
+      <div class="evaluation">
+        <h3>Evaluation</h3>
+        <p>
+          At the end of the semester, students take a general evaluation test
+          for every subject they're learning.
+        </p>
+      </div>
+      <div class="graduation">
+        <h3>Graduation Day</h3>
+        <p>
+          On the day of graduation, all the students gather for the geremony and
+          then network and party among others.
+        </p>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -227,5 +268,68 @@ button {
   }
 }
 
-//
+//university section
+.university-section {
+  min-height: 700px;
+  background-color: #e56767;
+  text-align: center;
+  color: white;
+  padding-top: 100px;
+  position: relative;
+
+  .clock-img {
+    width: 50px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 {
+    background-color: #d92426;
+    color: white;
+    display: inline-block;
+  }
+
+  .timeline-img {
+    padding-top: 200px;
+    width: 80%;
+  }
+
+  h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    color: white;
+    font-size: 10px;
+    font-weight: 100;
+  }
+
+  .orientation,
+  .demo,
+  .evaluation,
+  .graduation {
+    max-width: 250px;
+    position: absolute;
+  }
+
+  .orientation {
+    bottom: 44px;
+    left: 203px;
+  }
+  .demo {
+    top: 327px;
+    left: 410px;
+  }
+  .evaluation {
+    bottom: 44px;
+    right: 406px;
+  }
+  .graduation {
+    top: 327px;
+    right: 203px;
+  }
+}
 </style>
