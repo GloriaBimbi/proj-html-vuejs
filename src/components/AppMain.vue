@@ -1,5 +1,6 @@
 <script>
 import { store } from "../store/index";
+import EventCard from "./EventCard.vue";
 
 export default {
   data() {
@@ -9,12 +10,17 @@ export default {
   },
   props: {
     facultyList: Array,
+    eventCards: Array,
+  },
+  components: {
+    EventCard,
   },
 };
 </script>
 
 <template>
   <main>
+    <!-- courses section -->
     <div class="courses-section">
       <div class="container">
         <div class="info">
@@ -39,6 +45,7 @@ export default {
         />
       </div>
     </div>
+    <!-- faculties section -->
     <div class="faculties-section">
       <div class="container">
         <h2>Faculties available at EduPrime</h2>
@@ -72,6 +79,7 @@ export default {
       </div>
       <img src="../assets/img/svg/svg-0.svg" alt="border" class="border-img" />
     </div>
+    <!-- university section -->
     <div class="university-section">
       <img
         src="../assets/img/Clock-and-Bell.png"
@@ -112,6 +120,19 @@ export default {
           then network and party among others.
         </p>
       </div>
+    </div>
+    <!-- upcoming section -->
+    <div class="upcoming-section">
+      <img
+        src="../assets/img/upcoming-events-calendar-icon.png"
+        alt="calendar img"
+        class="calendar-img"
+      />
+      <h2>Upcoming Events</h2>
+      <div class="card-container">
+        <event-card :eventCards="eventCards" />
+      </div>
+      <button class="yellow-button">View All Events</button>
     </div>
   </main>
 </template>
@@ -254,6 +275,10 @@ button {
       }
       .red-button {
         background-color: #e56767;
+
+        &:hover {
+          background-color: #c93333;
+        }
       }
       h3 {
         font-size: 25px;
@@ -330,6 +355,39 @@ button {
   .graduation {
     top: 327px;
     right: 203px;
+  }
+}
+
+//upcoming section
+.upcoming-section {
+  text-align: center;
+  background-color: #e56767;
+  padding-top: 30px;
+  min-height: 500px;
+  .calendar-img {
+    width: 50px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .yellow-button {
+    background-color: #e9d657;
+    margin: 0;
+    margin-top: 50px;
+
+    &:hover {
+      background-color: #e2ae3d;
+    }
   }
 }
 </style>

@@ -72,6 +72,29 @@ export default {
           name: "Graphic Design",
         },
       ],
+      eventCards: [
+        {
+          event: "Coaching Sessions",
+          date: "20 May 21:30 PM",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab expedita labore ipsa necessitatibus! Laboriosam, quidem blanditiis repellendus [...]",
+          button: "Find More",
+        },
+        {
+          event: "Coaching Sessions",
+          date: "24 Mar 18:00 PM",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab expedita labore ipsa necessitatibus! Laboriosam, quidem blanditiis repellendus [...]",
+          button: "Find More",
+        },
+        {
+          event: "Coaching Sessions",
+          date: "12 Feb 13:30 PM",
+          description:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab expedita labore ipsa necessitatibus! Laboriosam, quidem blanditiis repellendus [...]",
+          button: "Find More",
+        },
+      ],
     };
   },
   components: { AppMain, AppHeader, AppFooter },
@@ -80,7 +103,7 @@ export default {
 
 <template>
   <app-header :headerLiks="headerLiks" />
-  <app-main :facultyList="facultyList" />
+  <app-main :facultyList="facultyList" :eventCards="eventCards" />
   <app-footer :footerLinks="footerLinks" :footerCategories="footerCategories" />
 </template>
 
