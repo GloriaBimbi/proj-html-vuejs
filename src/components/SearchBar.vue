@@ -51,6 +51,10 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+      background-color: #e2ae3d;
+    }
   }
 }
 </style>

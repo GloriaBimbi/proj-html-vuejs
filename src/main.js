@@ -11,6 +11,7 @@ import {
   faCartShopping,
   faBookOpen,
   faGear,
+  faAngleUp,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
@@ -26,7 +27,8 @@ library.add(
   faGear,
   faFacebookF,
   faTwitter,
-  faInstagram
+  faInstagram,
+  faAngleUp
 );
 
 const app = createApp(App);

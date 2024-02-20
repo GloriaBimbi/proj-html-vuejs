@@ -41,6 +41,15 @@ export default {
           ],
         },
       ],
+      footerCategories: [
+        "ECONOMY",
+        "DESIGN",
+        "COACHING",
+        "BUSINESS",
+        "MEDICINE",
+        "LAW",
+        "FITNESS",
+      ],
     };
   },
   components: { AppMain, AppHeader, AppFooter },
@@ -50,7 +59,7 @@ export default {
 <template>
   <app-header :headerLiks="headerLiks" />
   <app-main />
-  <app-footer :footerLinks="footerLinks" />
+  <app-footer :footerLinks="footerLinks" :footerCategories="footerCategories" />
 </template>
 
 <style lang="scss">

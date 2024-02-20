@@ -10,6 +10,7 @@ export default {
   },
   props: {
     footerLinks: Array,
+    footerCategories: Array,
   },
   components: {
     SearchBar,
@@ -19,6 +20,17 @@ export default {
 
 <template>
   <footer>
+    <font-awesome-icon icon="fa-solid fa-angle-up" class="go-up-icon" />
+    <div class="side-labels">
+      <div class="purchase">
+        <img src="../assets/img/svg/svg-3.svg" alt="purchase logo" />
+        <span>Purchase Theme</span>
+      </div>
+      <div class="related">
+        <img src="../assets/img/svg/svg-2.svg" alt="related logo" />
+        <span>Related Themes</span>
+      </div>
+    </div>
     <div class="logo">
       <img src="../assets/img/theme_eduprime_logo.png" alt="logo img" />
       <span
@@ -55,6 +67,13 @@ export default {
     </div>
     <div class="search">
       <search-bar />
+      <h5>Search caregories</h5>
+      <div class="category-container">
+        <span v-for="category in footerCategories" class="category">{{
+          category
+        }}</span>
+      </div>
+      <div class="motto">ModelTheme. All rights reserved.</div>
     </div>
   </footer>
 </template>
@@ -65,14 +84,56 @@ footer {
   color: white;
   padding: 100px 0;
   min-height: 300px;
+  position: relative;
 
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 50px;
 
+  .go-up-icon {
+    padding: 10px;
+    font-size: 20px;
+    background-color: #e2ae3d;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgb(59, 59, 59);
+
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .side-labels {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    width: 120px;
+
+    img {
+      max-width: 10px;
+      margin-right: 5px;
+    }
+
+    span {
+      font-size: 8px;
+      font-weight: 100;
+      color: grey;
+    }
+
+    .purchase,
+    .related {
+      padding: 8px 20px;
+      margin-bottom: 10px;
+      background-color: #404444;
+      box-shadow: 2px 2px 10px rgb(59, 59, 59);
+      border-radius: 5px;
+
+      display: flex;
+      align-items: center;
+    }
+  }
   .logo {
-    max-width: 300px;
+    max-width: 280px;
     img {
       width: 200px;
       display: block;
@@ -102,12 +163,16 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:hover {
+          color: #e9d657;
+        }
       }
     }
   }
 
   .links {
-    max-width: 300px;
+    max-width: 280px;
 
     display: flex;
     justify-content: space-between;
@@ -122,12 +187,50 @@ footer {
         color: white;
         line-height: 40px;
         font-weight: 100;
+
+        &:hover {
+          color: #e9d657;
+        }
       }
     }
   }
 
   .search {
-    max-width: 300px;
+    max-width: 280px;
+    text-align: end;
+
+    h5 {
+      margin: 50px 0 30px 0;
+    }
+
+    .category-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      .category {
+        padding: 10px;
+        border: 1px solid white;
+        border-radius: 30px;
+        font-size: 10px;
+        font-weight: 100;
+        margin: 5px;
+
+        &:hover {
+          color: #e9d657;
+          border-color: #e9d657;
+        }
+      }
+    }
+
+    .motto {
+      color: #e9d657;
+      font-size: 15px;
+      margin-top: 25px;
+
+      &:hover {
+        color: #e2ae3d;
+      }
+    }
   }
 }
 </style>
