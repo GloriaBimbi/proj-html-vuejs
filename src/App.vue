@@ -17,39 +17,6 @@ export default {
         "Contact",
         "Purchase",
       ],
-      footerLinks: [
-        {
-          title: "Get EduPrime",
-          links: [
-            "Request a website",
-            "Browse Themes",
-            "Payment Options",
-            "Support System",
-            "Checkout",
-            "Purchase Theme",
-          ],
-        },
-        {
-          title: "Networking",
-          links: [
-            "Purchase Theme",
-            "Our Benefits",
-            "Our Theam",
-            "Our Services",
-            "Other Products",
-            "My account",
-          ],
-        },
-      ],
-      footerCategories: [
-        "ECONOMY",
-        "DESIGN",
-        "COACHING",
-        "BUSINESS",
-        "MEDICINE",
-        "LAW",
-        "FITNESS",
-      ],
       facultyList: [
         {
           uri: "/Gavel-v2.png",
@@ -134,6 +101,39 @@ export default {
         "/partner-6.png",
         "/partner-7.png",
         "/partner-8.png",
+      ],
+      footerLinks: [
+        {
+          title: "Get EduPrime",
+          links: [
+            "Request a website",
+            "Browse Themes",
+            "Payment Options",
+            "Support System",
+            "Checkout",
+            "Purchase Theme",
+          ],
+        },
+        {
+          title: "Networking",
+          links: [
+            "Purchase Theme",
+            "Our Benefits",
+            "Our Theam",
+            "Our Services",
+            "Other Products",
+            "My account",
+          ],
+        },
+      ],
+      footerCategories: [
+        "ECONOMY",
+        "DESIGN",
+        "COACHING",
+        "BUSINESS",
+        "MEDICINE",
+        "LAW",
+        "FITNESS",
       ],
     };
   },

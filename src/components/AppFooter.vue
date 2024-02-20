@@ -33,10 +33,10 @@ export default {
     </div>
     <div class="logo">
       <img src="../assets/img/theme_eduprime_logo.png" alt="logo img" />
-      <span
-        >EduPrime is the most versatile wordPress theme for educational
-        purposes, showcasing universities, courses, secondary schools etc.</span
-      >
+      <p>
+        EduPrime is the most versatile wordPress theme for educational purposes,
+        showcasing universities, courses, secondary schools etc.
+      </p>
       <div class="socials">
         <div class="facebook">
           <font-awesome-icon
@@ -89,7 +89,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 50px;
+  gap: 25px;
 
   .go-up-icon {
     padding: 10px;
@@ -125,7 +125,6 @@ footer {
     .purchase,
     .related {
       padding: 8px 20px;
-      margin-bottom: 10px;
       background-color: #404444;
       box-shadow: 2px 2px 10px rgb(59, 59, 59);
       border-radius: 5px;
@@ -133,7 +132,13 @@ footer {
       display: flex;
       align-items: center;
     }
+
+    .purchase {
+      margin-bottom: 10px;
+    }
   }
+
+  // left column
   .logo {
     max-width: 280px;
     img {
@@ -141,9 +146,11 @@ footer {
       display: block;
       margin-bottom: 40px;
     }
-    span {
+    p {
       font-weight: 100;
-      line-height: 30px;
+      line-height: 20px;
+      font-size: 10px;
+      color: rgb(229, 229, 229);
     }
 
     .socials {
@@ -152,15 +159,16 @@ footer {
       align-items: center;
       gap: 30px;
 
-      margin-top: 40px;
+      margin-top: 25px;
 
       .facebook,
       .twitter,
       .instagram {
-        width: 50px;
+        width: 40px;
         aspect-ratio: 1;
         border: 2px solid #e9d657;
         border-radius: 50%;
+        font-size: 15px;
 
         display: flex;
         justify-content: center;
@@ -173,8 +181,9 @@ footer {
     }
   }
 
+  // middle column
   .links {
-    max-width: 280px;
+    max-width: 285px;
 
     display: flex;
     justify-content: space-between;
@@ -186,9 +195,10 @@ footer {
     }
     li {
       a {
-        color: white;
-        line-height: 40px;
+        color: rgb(229, 229, 229);
+        line-height: 30px;
         font-weight: 100;
+        font-size: 10px;
 
         &:hover {
           color: #e9d657;
@@ -197,12 +207,13 @@ footer {
     }
   }
 
+  // right column
   .search {
     max-width: 280px;
     text-align: end;
 
     h5 {
-      margin: 50px 0 30px 0;
+      margin: 30px 0 20px 0;
     }
 
     .category-container {
@@ -210,8 +221,9 @@ footer {
       flex-wrap: wrap;
       justify-content: flex-end;
       .category {
-        padding: 10px;
-        border: 1px solid white;
+        padding: 5px 10px;
+        color: rgb(229, 229, 229);
+        border: 1px solid rgb(229, 229, 229);
         border-radius: 30px;
         font-size: 10px;
         font-weight: 100;
