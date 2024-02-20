@@ -9,7 +9,7 @@ export default {
   },
 
   props: {
-    headerLinks: Array,
+    headerLiks: Array,
   },
 };
 </script>
@@ -22,7 +22,7 @@ export default {
       </div>
       <div class="info">
         <ul class="link-list">
-          <li v-for="link in headerLinks">
+          <li v-for="link in headerLiks">
             <a href="#">{{ link }}</a>
             <font-awesome-icon icon="fa-solid fa-caret-down" />
           </li>
@@ -199,6 +199,7 @@ header {
   }
   .wave-img {
     display: block;
+    width: 100%;
   }
 }
 </style>

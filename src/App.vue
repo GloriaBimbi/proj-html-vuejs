@@ -50,6 +50,28 @@ export default {
         "LAW",
         "FITNESS",
       ],
+      facultyList: [
+        {
+          uri: "/Gavel-v2.png",
+          name: "Law Faculty",
+        },
+        {
+          uri: "/Coins-tabs-v2.png",
+          name: "Economy",
+        },
+        {
+          uri: "/Medicine-tabs-v2.png",
+          name: "Medicine",
+        },
+        {
+          uri: "/Computer-tabs-v2.png",
+          name: "Computer Science",
+        },
+        {
+          uri: "/Palette-tabs-v2.png",
+          name: "Graphic Design",
+        },
+      ],
     };
   },
   components: { AppMain, AppHeader, AppFooter },
@@ -58,7 +80,7 @@ export default {
 
 <template>
   <app-header :headerLiks="headerLiks" />
-  <app-main />
+  <app-main :facultyList="facultyList" />
   <app-footer :footerLinks="footerLinks" :footerCategories="footerCategories" />
 </template>
 
