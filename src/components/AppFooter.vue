@@ -93,6 +93,8 @@ footer {
 
   .go-up-icon {
     padding: 10px;
+    width: 20px;
+    height: 20px;
     font-size: 20px;
     background-color: #e2ae3d;
     border-radius: 50%;

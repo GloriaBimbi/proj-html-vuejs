@@ -14,6 +14,7 @@ export default {
     facultyList: Array,
     eventCards: Array,
     courseCards: Array,
+    partnersLogoUri: Array,
   },
   components: {
     EventCard,
@@ -204,6 +205,30 @@ export default {
         <search-bar class="search-bar" />
       </div>
     </div>
+    <!-- partners section -->
+    <div class="partners-section">
+      <div class="container">
+        <h2>Partners</h2>
+        <p>
+          Leverage agile frameworks to provide a robust synopsis for high level
+          overviews. Iterative approaches to corporate strategy.
+        </p>
+      </div>
+
+      <div class="logo-container">
+        <img
+          v-for="partner in partnersLogoUri"
+          :src="partner"
+          alt="logo img"
+          class="partner"
+        />
+      </div>
+      <img
+        src="../assets/img/background-wave3.png"
+        alt="wave img"
+        class="bottom-hill"
+      />
+    </div>
   </main>
 </template>
 
@@ -238,6 +263,7 @@ button {
 //courses section
 .courses-section {
   min-height: 400px;
+  background-color: #ffffff;
   background-image: url("../assets/img/home-background.png");
   background-size: 100% 100%;
 
@@ -275,6 +301,7 @@ button {
 .faculties-section {
   margin-top: 100px;
   min-height: 200px;
+  background-color: #ffffff;
 
   .container {
     text-align: center;
@@ -470,6 +497,7 @@ button {
 //latest section
 .latest-section {
   margin-bottom: 20px;
+  background-color: #ffffff;
   .course-container {
     display: flex;
     justify-content: flex-start;
@@ -529,6 +557,41 @@ button {
       color: white;
       font-size: 25px;
     }
+  }
+}
+
+//partners section
+.partners-section {
+  text-align: center;
+  background-color: #ffffff;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  p {
+    margin: 0 200px;
+    color: rgb(96, 96, 96);
+  }
+
+  .logo-container {
+    margin: 40px 0 0 0;
+
+    .partner {
+      max-height: 40px;
+      opacity: 30%;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+
+  .bottom-hill {
+    display: block;
+    width: 100%;
+    height: 250px;
+    filter: invert(100%);
+    opacity: 5%;
+    transform: rotate(180deg);
   }
 }
 </style>

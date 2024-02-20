@@ -125,6 +125,16 @@ export default {
           button: "View Course",
         },
       ],
+      partnersLogoUri: [
+        "/partner-1.png",
+        "/partner-2.png",
+        "/partner-3.png",
+        "/partner-4.png",
+        "/partner-5.png",
+        "/partner-6.png",
+        "/partner-7.png",
+        "/partner-8.png",
+      ],
     };
   },
   components: { AppMain, AppHeader, AppFooter },
@@ -137,6 +147,7 @@ export default {
     :facultyList="facultyList"
     :eventCards="eventCards"
     :courseCards="courseCards"
+    :partnersLogoUri="partnersLogoUri"
   />
   <app-footer :footerLinks="footerLinks" :footerCategories="footerCategories" />
 </template>
