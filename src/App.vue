@@ -95,6 +95,36 @@ export default {
           button: "Find More",
         },
       ],
+      courseCards: [
+        {
+          uri: "/Decisions-icon.png",
+          course: "Make Better Decisions",
+          teacherName: "James Colins",
+          price: "$21.00",
+          button: "View Course",
+        },
+        {
+          uri: "/Speaker-icon.png",
+          course: "How to be a speaker",
+          teacherName: "James Colins",
+          price: "Free",
+          button: "View Course",
+        },
+        {
+          uri: "/Network-icon.png",
+          course: "Network Introductions",
+          teacherName: "James Colins",
+          price: "Free",
+          button: "View Course",
+        },
+        {
+          uri: "/Brand-icon.png",
+          course: "Brand Management",
+          teacherName: "James Colins",
+          price: "Free",
+          button: "View Course",
+        },
+      ],
     };
   },
   components: { AppMain, AppHeader, AppFooter },
@@ -103,7 +133,11 @@ export default {
 
 <template>
   <app-header :headerLiks="headerLiks" />
-  <app-main :facultyList="facultyList" :eventCards="eventCards" />
+  <app-main
+    :facultyList="facultyList"
+    :eventCards="eventCards"
+    :courseCards="courseCards"
+  />
   <app-footer :footerLinks="footerLinks" :footerCategories="footerCategories" />
 </template>
 

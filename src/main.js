@@ -13,13 +13,18 @@ import {
   faGear,
   faAngleUp,
   faPlus,
+  faMoneyBill,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
   faTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
+import {
+  faCalendarDays,
+  faUser,
+  faEye,
+} from "@fortawesome/free-regular-svg-icons";
 library.add(
   faMagnifyingGlass,
   faUserPlus,
@@ -32,7 +37,10 @@ library.add(
   faInstagram,
   faAngleUp,
   faCalendarDays,
-  faPlus
+  faPlus,
+  faUser,
+  faMoneyBill,
+  faEye
 );
 
 const app = createApp(App);

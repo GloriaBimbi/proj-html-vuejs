@@ -1,6 +1,7 @@
 <script>
 import { store } from "../store/index";
 import EventCard from "./EventCard.vue";
+import CourseCard from "./CourseCard.vue";
 
 export default {
   data() {
@@ -11,9 +12,11 @@ export default {
   props: {
     facultyList: Array,
     eventCards: Array,
+    courseCards: Array,
   },
   components: {
     EventCard,
+    CourseCard,
   },
 };
 </script>
@@ -129,10 +132,68 @@ export default {
         class="calendar-img"
       />
       <h2>Upcoming Events</h2>
-      <div class="card-container">
+      <div class="event-container">
         <event-card :eventCards="eventCards" />
       </div>
       <button class="yellow-button">View All Events</button>
+      <img
+        src="../assets/img/Wave-1.png"
+        alt="wave img"
+        class="bottom-wave-img"
+      />
+    </div>
+    <!-- latest section -->
+    <div class="latest-section">
+      <div class="container">
+        <h2>Latest Courses</h2>
+        <div class="course-container">
+          <course-card :courseCards="courseCards" />
+        </div>
+        <div class="efficient">
+          <div class="description">
+            <img
+              src="../assets/img/Exam-icon.png"
+              alt="paper img"
+              class="simble"
+            />
+            <h2>Variable fees for international students</h2>
+            <p>
+              EduPrime has gathered teachers from around the globe to brainstorm
+              in order to facilitate the evaluation of our students. Every
+              teacher from our university has an influence on how students are
+              evaluated at his/her subject.
+            </p>
+            <button class="red-button">List of Fees</button>
+          </div>
+          <img
+            src="../assets/img/Exam-Illustration.png"
+            alt="exam illustration"
+            class="exam-img"
+          />
+        </div>
+        <div class="variable">
+          <img
+            src="../assets/img/Girl-Illustration.png"
+            alt="girl illustration"
+            class="exam-img"
+          />
+          <div class="description">
+            <img
+              src="../assets/img/Exam-icon-1.png"
+              alt="paper img"
+              class="simble"
+            />
+            <h2>The most efficient examination method</h2>
+            <p>
+              EduPrime has gathered teachers from around the globe to brainstorm
+              in order to facilitate the evaluation of our students. Every
+              teacher from our university has an influence on how students are
+              evaluated at his/her subject.
+            </p>
+            <button class="red-button">Discover the Method</button>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 </template>
@@ -363,7 +424,7 @@ button {
   text-align: center;
   background-color: #e56767;
   padding-top: 30px;
-  min-height: 500px;
+  min-height: 600px;
   .calendar-img {
     width: 50px;
     margin-bottom: 20px;
@@ -373,7 +434,7 @@ button {
     color: white;
   }
 
-  .card-container {
+  .event-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -387,6 +448,58 @@ button {
 
     &:hover {
       background-color: #e2ae3d;
+    }
+  }
+
+  .bottom-wave-img {
+    width: 100%;
+    display: block;
+    padding-top: 70px;
+  }
+}
+
+//latest section
+.latest-section {
+  min-height: 1000px;
+
+  .course-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
+  .efficient,
+  .variable {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 30px;
+    .description {
+      text-align: start;
+      max-width: 400px;
+
+      .simble {
+        width: 50px;
+      }
+      h2 {
+        margin: 15px 0 40px 0;
+      }
+      p {
+        max-width: calc(100% - 50px);
+        color: rgb(94, 93, 93);
+      }
+
+      .red-button {
+        background-color: #e56767;
+      }
+    }
+
+    .exam-img {
+      max-width: 300px;
     }
   }
 }
