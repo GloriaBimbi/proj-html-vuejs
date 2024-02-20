@@ -1,5 +1,6 @@
 <script>
 import { store } from "../store/index";
+import SearchBar from "./SearchBar.vue";
 
 export default {
   data() {
@@ -9,6 +10,9 @@ export default {
   },
   props: {
     footerLinks: Array,
+  },
+  components: {
+    SearchBar,
   },
 };
 </script>
@@ -49,7 +53,9 @@ export default {
         </ul>
       </div>
     </div>
-    <div class="search"></div>
+    <div class="search">
+      <search-bar />
+    </div>
   </footer>
 </template>
 
