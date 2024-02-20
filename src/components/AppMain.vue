@@ -2,6 +2,7 @@
 import { store } from "../store/index";
 import EventCard from "./EventCard.vue";
 import CourseCard from "./CourseCard.vue";
+import SearchBar from "./SearchBar.vue";
 
 export default {
   data() {
@@ -17,6 +18,7 @@ export default {
   components: {
     EventCard,
     CourseCard,
+    SearchBar,
   },
 };
 </script>
@@ -156,14 +158,14 @@ export default {
               alt="paper img"
               class="simble"
             />
-            <h2>Variable fees for international students</h2>
+            <h2>The most efficient examination method</h2>
             <p>
               EduPrime has gathered teachers from around the globe to brainstorm
               in order to facilitate the evaluation of our students. Every
               teacher from our university has an influence on how students are
               evaluated at his/her subject.
             </p>
-            <button class="red-button">List of Fees</button>
+            <button class="red-button">Discover the Method</button>
           </div>
           <img
             src="../assets/img/Exam-Illustration.png"
@@ -183,16 +185,23 @@ export default {
               alt="paper img"
               class="simble"
             />
-            <h2>The most efficient examination method</h2>
+            <h2>Variable fees for international students</h2>
             <p>
               EduPrime has gathered teachers from around the globe to brainstorm
               in order to facilitate the evaluation of our students. Every
               teacher from our university has an influence on how students are
               evaluated at his/her subject.
             </p>
-            <button class="red-button">Discover the Method</button>
+            <button class="red-button">List of Fees</button>
           </div>
         </div>
+      </div>
+    </div>
+    <!-- subscribe section -->
+    <div class="subscribe-section">
+      <div class="container">
+        <h2>Subscribe Now to Our Newslatter!</h2>
+        <search-bar class="search-bar" />
       </div>
     </div>
   </main>
@@ -460,8 +469,7 @@ button {
 
 //latest section
 .latest-section {
-  min-height: 1000px;
-
+  margin-bottom: 20px;
   .course-container {
     display: flex;
     justify-content: flex-start;
@@ -476,6 +484,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
 
     margin-top: 30px;
     .description {
@@ -499,7 +508,26 @@ button {
     }
 
     .exam-img {
-      max-width: 300px;
+      max-width: 350px;
+    }
+  }
+}
+
+//subscribe section
+.subscribe-section {
+  background-color: #e56767;
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  .container {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      color: white;
+      font-size: 25px;
     }
   }
 }
