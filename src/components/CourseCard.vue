@@ -7,6 +7,11 @@ export default {
       store,
     };
   },
+  methods: {
+    buildImagePath(imageName) {
+      return new URL("../assets/img/" + imageName, import.meta.url).href;
+    },
+  },
   props: {
     courseCards: Array,
   },
@@ -15,7 +20,7 @@ export default {
 
 <template>
   <div v-for="card in courseCards" class="course-card">
-    <img :src="card.uri" alt="course img" />
+    <img :src="buildImagePath(card.uri)" alt="course img" />
     <h3>{{ card.course }}</h3>
     <div class="teacher">
       <font-awesome-icon icon="fa-regular fa-user" class="icon" />

@@ -10,6 +10,11 @@ export default {
       store,
     };
   },
+  methods: {
+    buildImagePath(imageName) {
+      return new URL("../assets/img/" + imageName, import.meta.url).href;
+    },
+  },
   props: {
     facultyList: Array,
     eventCards: Array,
@@ -73,11 +78,11 @@ export default {
       <div class="faculties-list">
         <div class="faculty mouse-over">
           <font-awesome-icon icon="fa-solid fa-caret-down" class="hover-icon" />
-          <img src="/Gavel-v2.png" alt="gavel img" />
+          <img src="../assets/img/Gavel-v2.png" alt="gavel img" />
           <h6>Law Faculty</h6>
         </div>
         <div v-for="faculty in facultyList" class="faculty">
-          <img :src="faculty.uri" alt="gavel img" />
+          <img :src="buildImagePath(faculty.uri)" alt="gavel img" />
           <h6>{{ faculty.name }}</h6>
         </div>
       </div>
@@ -232,7 +237,7 @@ export default {
       <div class="logo-container">
         <img
           v-for="partner in partnersLogoUri"
-          :src="partner"
+          :src="buildImagePath(partner)"
           alt="logo img"
           class="partner"
         />
@@ -600,7 +605,7 @@ button {
 .subscribe-section {
   background-color: #e56767;
   padding-top: 30px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 
   .container {
     margin-top: 0;

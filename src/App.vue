@@ -60,28 +60,28 @@ export default {
       ],
       courseCards: [
         {
-          uri: "/Decisions-icon.png",
+          uri: "Decisions-icon.png",
           course: "Make Better Decisions",
           teacherName: "James Colins",
           price: "$21.00",
           button: "View Course",
         },
         {
-          uri: "/Speaker-icon.png",
+          uri: "Speaker-icon.png",
           course: "How to be a speaker",
           teacherName: "James Colins",
           price: "Free",
           button: "View Course",
         },
         {
-          uri: "/Network-icon.png",
+          uri: "Network-icon.png",
           course: "Network Introductions",
           teacherName: "James Colins",
           price: "Free",
           button: "View Course",
         },
         {
-          uri: "/Brand-icon.png",
+          uri: "Brand-icon.png",
           course: "Brand Management",
           teacherName: "James Colins",
           price: "Free",
