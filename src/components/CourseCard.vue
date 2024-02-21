@@ -13,26 +13,26 @@ export default {
     },
   },
   props: {
-    courseCards: Array,
+    courseCard: Object,
   },
 };
 </script>
 
 <template>
-  <div v-for="card in courseCards" class="course-card">
-    <img :src="buildImagePath(card.uri)" alt="course img" />
-    <h3>{{ card.course }}</h3>
+  <div class="course-card">
+    <img :src="buildImagePath(courseCard.uri)" alt="course img" />
+    <h3>{{ courseCard.course }}</h3>
     <div class="teacher">
       <font-awesome-icon icon="fa-regular fa-user" class="icon" />
-      Teacher: <b>{{ card.teacherName }}</b>
+      Teacher: <b>{{ courseCard.teacherName }}</b>
     </div>
     <div class="price">
       <font-awesome-icon icon="fa-solid fa-money-bill" class="icon" />
-      Price: {{ card.price }}
+      Price: {{ courseCard.price }}
     </div>
     <button class="red-button">
       <font-awesome-icon icon="fa-regular fa-eye" class="icon" />
-      {{ card.button }}
+      {{ courseCard.button }}
     </button>
   </div>
 </template>

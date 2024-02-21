@@ -3,6 +3,7 @@ import { store } from "./store/index";
 import AppMain from "./components/AppMain.vue";
 import AppHeader from "./components/AppHeader.vue";
 import AppFooter from "./components/AppFooter.vue";
+import axios from "axios";
 
 export default {
   data() {
@@ -33,59 +34,6 @@ export default {
         {
           uri: "/Palette-tabs-v2.png",
           name: "Graphic Design",
-        },
-      ],
-      eventCards: [
-        {
-          event: "Coaching Sessions",
-          date: "20 May 21:30 PM",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab expedita labore ipsa necessitatibus! Laboriosam, quidem blanditiis repellendus [...]",
-          button: "Find More",
-        },
-        {
-          event: "Coaching Sessions",
-          date: "24 Mar 18:00 PM",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab expedita labore ipsa necessitatibus! Laboriosam, quidem blanditiis repellendus [...]",
-          button: "Find More",
-        },
-        {
-          event: "Coaching Sessions",
-          date: "12 Feb 13:30 PM",
-          description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab expedita labore ipsa necessitatibus! Laboriosam, quidem blanditiis repellendus [...]",
-          button: "Find More",
-        },
-      ],
-      courseCards: [
-        {
-          uri: "Decisions-icon.png",
-          course: "Make Better Decisions",
-          teacherName: "James Colins",
-          price: "$21.00",
-          button: "View Course",
-        },
-        {
-          uri: "Speaker-icon.png",
-          course: "How to be a speaker",
-          teacherName: "James Colins",
-          price: "Free",
-          button: "View Course",
-        },
-        {
-          uri: "Network-icon.png",
-          course: "Network Introductions",
-          teacherName: "James Colins",
-          price: "Free",
-          button: "View Course",
-        },
-        {
-          uri: "Brand-icon.png",
-          course: "Brand Management",
-          teacherName: "James Colins",
-          price: "Free",
-          button: "View Course",
         },
       ],
       partnersLogoUri: [
@@ -133,18 +81,29 @@ export default {
       ],
     };
   },
+  methods: {
+    fetchEvents() {
+      axios.get(`${store.apiUri}/eventCards`).then((res) => {
+        store.events = res.data;
+      });
+    },
+    fetchCourses() {
+      axios.get(`${store.apiUri}/courseCards`).then((res) => {
+        store.courses = res.data;
+      });
+    },
+  },
+  created() {
+    this.fetchEvents();
+    this.fetchCourses();
+  },
   components: { AppMain, AppHeader, AppFooter },
 };
 </script>
 
 <template>
   <app-header :headerLiks="headerLiks" />
-  <app-main
-    :facultyList="facultyList"
-    :eventCards="eventCards"
-    :courseCards="courseCards"
-    :partnersLogoUri="partnersLogoUri"
-  />
+  <app-main :facultyList="facultyList" :partnersLogoUri="partnersLogoUri" />
   <app-footer :footerLinks="footerLinks" :footerCategories="footerCategories" />
 </template>
 

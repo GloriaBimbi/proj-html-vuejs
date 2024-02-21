@@ -17,8 +17,6 @@ export default {
   },
   props: {
     facultyList: Array,
-    eventCards: Array,
-    courseCards: Array,
     partnersLogoUri: Array,
   },
   components: {
@@ -155,7 +153,7 @@ export default {
       />
       <h2>Upcoming Events</h2>
       <div class="event-container">
-        <event-card :eventCards="eventCards" />
+        <event-card v-for="event in store.events" :eventCard="event" />
       </div>
       <button class="yellow-button">View All Events</button>
       <img
@@ -169,7 +167,7 @@ export default {
       <div class="container">
         <h2>Latest Courses</h2>
         <div class="course-container">
-          <course-card :courseCards="courseCards" />
+          <course-card v-for="course in store.courses" :courseCard="course" />
         </div>
         <div class="efficient">
           <div class="description">

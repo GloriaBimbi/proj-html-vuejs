@@ -8,27 +8,27 @@ export default {
     };
   },
   props: {
-    eventCards: Array,
+    eventCard: Object,
   },
 };
 </script>
 
 <template>
-  <div v-for="card in eventCards" class="event-card">
-    <h3>{{ card.event }}</h3>
+  <div class="event-card">
+    <h3>{{ eventCard.event }}</h3>
     <div class="date">
       <font-awesome-icon
         icon="fa-regular fa-calendar-days"
         class="calendar-icon"
       />
-      <span>{{ card.date }}</span>
+      <span>{{ eventCard.date }}</span>
     </div>
     <p>
-      {{ card.description }}
+      {{ eventCard.description }}
     </p>
     <button class="red-button">
       <font-awesome-icon icon="fa-solid fa-plus" class="plus-icon" />
-      Find More
+      {{ eventCard.button }}
     </button>
   </div>
 </template>
