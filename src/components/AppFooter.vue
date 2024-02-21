@@ -1,12 +1,9 @@
 <script>
-import { store } from "../store/index";
 import SearchBar from "./SearchBar.vue";
 
 export default {
   data() {
-    return {
-      store,
-    };
+    return {};
   },
   props: {
     footerLinks: Array,

@@ -351,6 +351,7 @@ button {
   margin-top: 100px;
   min-height: 200px;
   background-color: #ffffff;
+  overflow: hidden;
 
   .container {
     text-align: center;
