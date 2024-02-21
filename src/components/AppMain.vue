@@ -28,6 +28,16 @@ export default {
   <main>
     <!-- courses section -->
     <div class="courses-section">
+      <div class="message-container">
+        <div class="message">
+          <div class="envato-market">Purchase EduPrime on Envato Market</div>
+          <font-awesome-icon
+            icon="fa-solid fa-caret-down"
+            class="message-icon"
+          />
+        </div>
+      </div>
+
       <div class="container">
         <div class="info">
           <img
@@ -61,8 +71,12 @@ export default {
         </p>
       </div>
       <div class="faculties-list">
-        <div v-for="faculty in facultyList" class="faculty">
+        <div class="faculty mouse-over">
           <font-awesome-icon icon="fa-solid fa-caret-down" class="hover-icon" />
+          <img src="/Gavel-v2.png" alt="gavel img" />
+          <h6>Law Faculty</h6>
+        </div>
+        <div v-for="faculty in facultyList" class="faculty">
           <img :src="faculty.uri" alt="gavel img" />
           <h6>{{ faculty.name }}</h6>
         </div>
@@ -267,6 +281,38 @@ button {
   background-image: url("../assets/img/home-background.png");
   background-size: 100% 100%;
 
+  .message-container {
+    width: 200px;
+    height: 10px;
+    position: absolute;
+
+    .message {
+      position: relative;
+      top: -55px;
+      left: 125px;
+      .envato-market {
+        color: white;
+        background-color: black;
+        border-radius: 3px;
+        padding: 3px 5px;
+        font-size: 10px;
+        text-align: center;
+        font-weight: 100;
+        max-width: 120px;
+        position: absolute;
+      }
+
+      .message-icon {
+        color: black;
+        font-size: 15px;
+        font-weight: 100;
+        position: relative;
+        bottom: -22px;
+        left: 52px;
+      }
+    }
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -330,7 +376,6 @@ button {
       background-color: white;
       width: 150px;
       aspect-ratio: 1;
-      position: relative;
 
       display: flex;
       justify-content: center;
@@ -338,16 +383,22 @@ button {
       flex-direction: column;
       gap: 15px;
 
-      &:hover {
-        background-color: #fbb0b0;
-      }
+      &.mouse-over {
+        background-color: #e56767;
+        color: white;
+        position: relative;
 
-      .hover-icon {
-        color: #fbb0b0;
-        font-size: 30px;
-        position: absolute;
-        bottom: -17px;
-        right: auto;
+        img {
+          filter: brightness(0) invert(1);
+        }
+
+        .hover-icon {
+          color: #e56767;
+          font-size: 35px;
+          position: absolute;
+          bottom: -18px;
+          right: auto;
+        }
       }
 
       img {
@@ -532,6 +583,10 @@ button {
 
       .red-button {
         background-color: #e56767;
+
+        &:hover {
+          background-color: #c93333;
+        }
       }
     }
 

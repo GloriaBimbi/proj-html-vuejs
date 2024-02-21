@@ -19,10 +19,6 @@ export default {
       ],
       facultyList: [
         {
-          uri: "/Gavel-v2.png",
-          name: "Law Faculty",
-        },
-        {
           uri: "/Coins-tabs-v2.png",
           name: "Economy",
         },

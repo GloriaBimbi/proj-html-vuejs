@@ -166,7 +166,6 @@ header {
       .yellow-button,
       .white-button {
         padding: 15px 25px;
-        margin: 40px 40px 40px 0;
         border: 0;
         border-radius: 2rem;
         font-weight: bold;
@@ -176,10 +175,15 @@ header {
 
       .yellow-button {
         color: white;
+        margin: 40px 40px 40px 0;
         background-color: #e9d657;
 
         &:hover {
           background-color: #e2ae3d;
+        }
+
+        .white-button {
+          margin: 40px 40px 0px 0;
         }
       }
 

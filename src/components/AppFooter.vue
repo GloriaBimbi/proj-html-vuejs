@@ -103,6 +103,10 @@ footer {
     position: absolute;
     bottom: 30px;
     right: 30px;
+
+    &:hover {
+      background-color: #e9d657;
+    }
   }
 
   .side-labels {
@@ -131,6 +135,13 @@ footer {
 
       display: flex;
       align-items: center;
+
+      &:hover {
+        background-color: #6d6d6d;
+        span {
+          color: white;
+        }
+      }
     }
 
     .purchase {
